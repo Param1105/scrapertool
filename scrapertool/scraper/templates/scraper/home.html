@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <hr />
+    {% if result.id %}
+    <p>Task ID: {{ result.id }}</p>
+    <hr />
+    <a href="{% url 'check_result' result.id  %}">Check Task Status</a>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+      </ul>
+    </nav>
+    <h1>Task Status</h1>
+    <hr />
+    {% if result %}
+    <h3>Task ID: {{result.id}}</h3>
+    <h3>Task State: {{result.state}}</h3>
+    <h3>Task Status: {{result.status}}</h3>
+    <h3>Result Value: {{result.result}}</h3>
+    {% endif %}
+  </body>
+</html>
